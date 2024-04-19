@@ -1,12 +1,11 @@
-function Card() {
+function Card({ children, rounded, flat }) {
   return (
-    <div>
-      <h1>Title</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatum
-        porro ducimus, sint sequi eaque!
-      </p>
-    </div>
+    <article
+      class="bg-white p-4"
+      classList={{ "rounded-md": rounded, "shadow-md": !flat }}
+    >
+      {children}
+    </article>
   );
 }
 
